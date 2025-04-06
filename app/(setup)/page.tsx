@@ -1,9 +1,26 @@
-import React from 'react'
+import { db } from '@/lib/db';
+import { initialProfile } from '@/lib/initial-profile';
+import { Profile, Server } from '@prisma/client';
+import { redirect } from 'next/navigation';
+import React from 'react';
 
-const SetupPage = () => {
-  return (
-    <div>SetupPage</div>
-  )
-}
+const SetupPage = async () => {
+    const profile : Profile | any = await initialProfile();
 
-export default SetupPage
+    const server : Server | any = await db.server.findFirst({
+        where: {
+            members: {
+                some: {
+                    profileId: profile.id,
+                },
+            },
+        },
+    });
+
+    if (server) {
+        return redirect(`/servers/${server.id}`)
+    }
+    return <div>SetupPage</div>;
+};
+
+export default SetupPage;
