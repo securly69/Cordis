@@ -25,7 +25,7 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button className="bg-transparent border-0" variant="outline" size="icon">
           {theme === "dark" ? (
             <Moon className="h-[1.2rem] w-[1.2rem]" />
           ) : (
