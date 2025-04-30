@@ -25,7 +25,7 @@ const FileUpload = ({ onChange, value, endpoint }: FileUploadProps) => {
           className="rounded-full object-cover"
         />
         <button
-          onClick={() => onChange("")}
+          onChange={() => onChange("")}
           className="bg-rose-500 p-1 rounded-full 
         absolute top-0 right-0 shadow-sm "
         >
