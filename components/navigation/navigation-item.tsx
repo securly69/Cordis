@@ -24,7 +24,7 @@
        <button
          onClick={onClick}
          className="group relative flex
-         items-center"
+         items-center cursor-pointer"
        >
          <div
            className={cn(
