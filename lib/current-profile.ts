@@ -15,6 +15,5 @@ import { auth } from "@clerk/nextjs/server";
        userId: userId,
      },
    });
- 
    return profile;
  };
