@@ -28,10 +28,10 @@ import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(1, {
-    message: "Server name is required!",
+    message: "Server name is required",
   }),
   imageUrl: z.string().min(1, {
-    message: "Server image is required!",
+    message: "Server image is required",
   }),
 });
 
@@ -90,7 +90,7 @@ export const InitialModal = () => {
           font-bold
           "
           >
-            Create your server!
+            Create your first server!
           </DialogTitle>
           <DialogDescription
             className="
@@ -154,6 +154,7 @@ export const InitialModal = () => {
                         disabled={isLoading}
                         className="
                       bg-zinc-300/50
+                      dark:bg-zinc-300/50
                       border-0
                       focus-visible:ring-0
                       text-black
