@@ -60,7 +60,7 @@ import { currentProfile } from "@/lib/current-profile";
    return (
      <div
        className="flex flex-col h-full text-primary w-full 
-     dark:bg-[#282D31] bg-[#F2F3F5]"
+     dark:bg-[#282D31] bg-[#fbfbfb]"
      >
        <ServerHeader server={server} role={role} />
      </div>

@@ -28,7 +28,7 @@ import { currentProfile } from "@/lib/current-profile";
    return (
      <div
        className="space-y-4 flex flex-col items-center
-     h-full text-primary w-full dark:bg-[#1E1F22] bg-[#f3f3f4] py-3"
+     h-full text-primary w-full dark:bg-[#1E1F22] bg-[#e9ebee] py-3"
      >
        <NavigationAction />
        <Separator
